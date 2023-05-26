@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Your description">
+    <meta name="author" content="Your name">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/fontawesome-all.css" rel="stylesheet">
+    <link href="static/css/swiper.css" rel="stylesheet">
+	<link href="static/css/magnific-popup.css" rel="stylesheet">
+	<link href="static/css/styles.css" rel="stylesheet">
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="static/images/favicon.png">
+</head>
+
+<bodydata-spy="scroll" data-target=".fixed-top">
+    
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+      <div class="container">
+          <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+              <ul class="navbar-nav ml-auto">
+                 
+                  <li class="nav-item">
+                      <a class="nav-link page-scroll" href="/login">Signout</a>
+                  </li>
+                  
+              </ul>
+          </div> <!-- end of navbar-collapse -->
+      </div> <!-- end of container -->
+  </nav> <!-- end of navbar -->
+  <!-- end of navigation -->
+
+<!-- Header -->
+<header class="ex-header">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-10 offset-xl-1">
+              <h1>Prediction of EV Charging Behavior using Machine Learning</h1>
+              <br>
+              <h5 class="header col s12 light">Prediction of EV Charging Behavior using Machine Learning</h5>
+          </div> <!-- end of col -->
+         
+      </div> <!-- end of row -->
+  </div> <!-- end of container -->
+</header> <!-- end of ex-header -->
+<!-- end of header -->
+
+<div class="ex-basic-1 pt-4">
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+     <div class="row">
+        <form action='/predict' method="post" class="col s12">
+            
+                <div class="input-field col s4">
+                    <label for="first_name"><b>Odometer</b></label>
+                    <br>
+                    <input placeholder="Odometer Eg . 174082" name="1" id="first_name" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Trip Distance(km)</b></label>
+                    <br>
+                    <input id="_name" name="2" placeholder="trip_distance(km) Eg.19.5" type="text" class="validate">
+    
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Quantity(kWh)</b></label>
+                    <br>
+                    <input id="_name" name="3" placeholder="Quantity(kWh) Eg - 6.7" type="text" class="validate">
+    
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Tire Type</b></label>
+                    <br>
+                    <input id="last_name" name="4" placeholder="Tire Type Winter tires - 1, Summer tires - 0"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                  <label ><b>City</b></label>
+                  <br>
+                  <input name = '5' placeholder="City Yes - 1 else 0" type="text" class="validate">
+
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Motor Way</b></label>
+                    <br>
+                    <input id="last_name" name="6" placeholder="Motor Ways Eg 1, 0"  type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Country roads</b></label>
+                    <br>
+                    <input id="_name" name="7" placeholder="Country roads Eg 1, 0" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Driving style</b></label>
+                    <br>
+                    <input id="_name" name="8" placeholder="Driving style Eg Normal - 2, Fast 1 , Moderate - 0" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>A/C</b></label>
+                    <br>
+                    <input id="_name" name="9" placeholder="A/C Eg Yes 1 , no 0" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Park Heating</b></label>
+                    <br>
+                    <input id="_name" name="10" placeholder="Park Heating Eg Yes -1 , no 0" type="text" class="validate">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Ecr deviation</b></label>
+                    <br>
+                    <input id="_name" name="11" placeholder="Ecr deviation Eg - -2.78" type="text" class="validate">
+                </div>
+                
+    
+          </div>
+    
+          <div class="row center">
+    
+              <button style="text-align: center;" type="submit" class="btn-large waves-effect waves-light orange">Submit</button>
+
+          </div>
+        </form>
+  </div>
+</div>
+
+      <br>
+
+     
+    <br><br>
+  </div>
+  </div>>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+         <!-- Copyright -->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="p-small">Copyright © <a href="#your-link">2022</a></p>
+            </div> <!-- end of col -->
+        </div> <!-- enf of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of copyright --> 
+<!-- end of copyright -->
+    </div> <!-- end of container -->
+</div> <!-- end of footer -->  
+<!-- end of footer -->
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="static/js/materialize.js"></script>
+  <script src="static/js/init.js"></script>
+
+  <!-- Scripts -->
+  <script src="static/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+  <script src="static/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+  <script src="static/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+  <script src="static/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+  <script src="static/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+  <script src="static/js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
